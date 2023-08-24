@@ -1,0 +1,82 @@
+<html>
+<head>
+<style>
+body{
+ background-image: url('Images/background_img/bg2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+* {box-sizing: border-box;}
+myVideo {
+  position: fixed;
+  right: 70%;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+ /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+<script language="Javascript">
+MyBanners=new Array('Images/banners_img/banner1.jpg','Images/banners_img/banner2.jpg','Images/banners_img/banner3.jpg','Images/banners_img/banner4.jpg','Images/banners_img/banner5.jpg')
+banner=0
+function ShowBanners()
+{ if (document.images)
+{ banner++
+if (banner==MyBanners.length) {
+banner=0}
+document.ChangeBanner.src=MyBanners[banner]
+setTimeout("ShowBanners()",2000)
+}
+}
+</script>
+</head>
+<body  bgcolor=#99ffcc onload="ShowBanners()">
+
+<div class="topnav">
+      <div class="topnav">
+<a href="Living_Room.html">Living Room</a>
+   <a href="Bedroom.html">Bedroom</a>
+  <a href="Kitchen.html">Kitchen</a>
+  <a href="DID.html">Duplex Interior Design </a>
+  <a href="Design.html">Design Trends</a>
+</div>
+<div class="container">
+  </div>
+  </div>
+  <br><br>
+  <center>
+<img src="Images/banners_img/banner1.jpg" width="900" height="450" name="ChangeBanner"/>
+</center>
+</body>

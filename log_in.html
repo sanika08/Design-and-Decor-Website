@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript form validation - checking email</title>
+  <style>
+*{
+   text-align: center;
+   padding: 5px;
+}
+body{
+ background-image: url('Images/background_img/b20.jpg');
+  background-repeat: no-repeat;
+ background-attachment: fixed;  
+  background-size: cover;
+}
+</style> 
+</head>
+<body onload='document.form1.text1.focus()'>
+<br><br><center>
+<h2 style="font-size:50px;color:#e6005c !important;">LOGIN</h2></center>
+<form name="form1"> 
+<center>
+<b>USERNAME:</b><input type='text' name='user'/><br><br>
+<b>PASSWORD:</b><input type='text' name='text1'/>
+<br><br><br>
+<input type="submit" name="submit" value="Submit" onclick="ValidateLogin(document.form1.text1)"/>
+</center>
+
+</form>
+<script>
+function ValidateLogin(inputText)
+{
+var mailformat = /^[A-Z][a-z]{5}[0-9]*$/;
+if(inputText.value.match(mailformat))
+{
+alert("Valid Login!");
+var myWindow = window.open("login_success.html", "width=200,height=100");
+
+return true;
+}
+else
+{
+alert("You have entered an invalid Login!");
+document.form1.text1.focus();
+return false;
+}
+}
+</script>
+</body>
+</html>
